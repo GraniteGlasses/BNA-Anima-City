@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5w8pgt6i0wuu"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/main_st.gd" id="1_7xvth"]
+[ext_resource type="Texture2D" uid="uid://bmms5ls5m4i3p" path="res://Assets/City Street Simple.png" id="1_gqut5"]
+[ext_resource type="PackedScene" uid="uid://bt6teoaan4o18" path="res://Scenes/Player.tscn" id="2_uba7a"]
+[ext_resource type="PackedScene" uid="uid://dplt75nhc37e5" path="res://Scenes/road_segment.tscn" id="3_owe8t"]
+[ext_resource type="PackedScene" uid="uid://cco1s0fd4oo6p" path="res://Scenes/door.tscn" id="5_wvqfc"]
+
+[node name="main_st" type="Node2D"]
+script = ExtResource("1_7xvth")
+
+[node name="CityStreetSimple" type="Sprite2D" parent="."]
+position = Vector2(2074, 15)
+texture = ExtResource("1_gqut5")
+
+[node name="Road Segment" parent="." instance=ExtResource("3_owe8t")]
+position = Vector2(87, 544)
+
+[node name="Player" parent="." instance=ExtResource("2_uba7a")]
+position = Vector2(189, 345)
+
+[node name="door" parent="." instance=ExtResource("5_wvqfc")]
+position = Vector2(1623, 384)
+collision_layer = 3
+
+[connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
+[connection signal="body_exited" from="door" to="." method="_on_door_body_exited"]
