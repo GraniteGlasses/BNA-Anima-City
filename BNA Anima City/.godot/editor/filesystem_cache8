@@ -1,0 +1,59 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1722174906
+icon.svg::CompressedTexture2D::1817605534623876753::1722142738::1722174906::1::::<><>::
+::res://Assets/::1722174906
+City Street Simple.png::CompressedTexture2D::3254606427028730063::1722142738::1722174906::1::::<><>::
+Road Segment.png::CompressedTexture2D::4065278414373343282::1722142738::1722174906::1::::<><>::
+::res://Assets/Player Animations/::1722142738
+::res://Assets/Player Animations/Player Climb-Back/::1722174906
+player climb-back 48x48.png::CompressedTexture2D::8248793943159476202::1722142738::1722174906::1::::<><>::
+::res://Assets/Player Animations/Player Climb-Side/::1722174906
+Player Side-Climb 48x48.png::CompressedTexture2D::5865834659276177022::1722142738::1722174906::1::::<><>::
+::res://Assets/Player Animations/Player Climb-Side/old climb/::1722174906
+Player Side-Climb 48x48.png::CompressedTexture2D::3021013330506681748::1722142738::1722174906::1::::<><>::
+::res://Assets/Player Animations/Player Idle/::1722174906
+Player Idle 48x48.png::CompressedTexture2D::2253616917338173943::1722142738::1722174906::1::::<><>::
+::res://Assets/Player Animations/Player Jump/::1722174906
+player jump 48x48.png::CompressedTexture2D::2197213380035942129::1722142738::1722174906::1::::<><>::
+::res://Assets/Player Animations/Player Land/::1722174906
+player land 48x48.png::CompressedTexture2D::8009824964633911519::1722142738::1722174906::1::::<><>::
+::res://Assets/Player Animations/Player Run/::1722174906
+player run 48x48.png::CompressedTexture2D::4403872608628231908::1722142738::1722174906::1::::<><>::
+::res://Assets/Player Animations/PlayerWalk/::1722174906
+PlayerWalk 48x48.png::CompressedTexture2D::870954699524628114::1722142738::1722174906::1::::<><>::
+::res://Assets/Scripts/::1722176129
+cafe.gd::GDScript::-1::1722176034::0::1::::<>Node2D<>::
+Doors.gd::GDScript::-1::1722176152::0::1::::DoorResource<>Resource<>::
+global.gd::GDScript::-1::1722142738::0::1::::<>Node<>::
+main_menu.gd::GDScript::-1::1722174849::0::1::::<>Node<>::
+main_st.gd::GDScript::-1::1722176041::0::1::::<>Node2D<>::
+Menu Settings.gd::GDScript::-1::1722142738::0::1::::<>Control<>::
+pause_menu.gd::GDScript::-1::1722174849::0::1::::<>Control<>::
+Player.gd::GDScript::-1::1722175895::0::1::::<>CharacterBody2D<>::
+::res://Assets/Scripts/Resources/::1722176140
+::res://Assets/Scripts/Resources/DoorResources/::1722176140
+to_cafe.tres::Resource/DoorResource::4661212572936937146::1722176174::0::1::::<><>::res://Assets/Scripts/Doors.gd
+::res://Assets/Ui/::1722174906
+Arrow Down Sprite Sheet take 3.png::CompressedTexture2D::6760930024092744992::1722142738::1722174906::1::::<><>::
+Arrow Up Outline 256.png::CompressedTexture2D::7292713894737423704::1722142738::1722174906::1::::<><>::
+Camera Outline scaled.png::CompressedTexture2D::3395008561529603683::1722142738::1722174906::1::::<><>::
+Door Open Outline scaled.png::CompressedTexture2D::3620757178291949458::1722142738::1722174906::1::::<><>::
+Envelope White Outline 256.png::CompressedTexture2D::917083395130529939::1722142738::1722174906::1::::<><>::
+Exclamation Mark Outline scaled.png::CompressedTexture2D::5765181405433383657::1722142738::1722174906::1::::<><>::
+Gear Outline scaled.png::CompressedTexture2D::8915937109561479296::1722142738::1722174906::1::::<><>::
+Info Outline 256.png::CompressedTexture2D::7294767006347803163::1722142738::1722174906::1::::<><>::
+Loading Wheel Outline 256.png::CompressedTexture2D::8764307437406066464::1722142738::1722174906::1::::<><>::
+Message Box Outline scaled.png::CompressedTexture2D::246515174325434970::1722142738::1722174906::1::::<><>::
+Michiru cellphone.png::CompressedTexture2D::458803431871231308::1722142738::1722174906::1::::<><>::
+Save Outline scaled.png::CompressedTexture2D::4228914692775022998::1722142738::1722174906::1::::<><>::
+::res://Scenes/::1722176041
+cafe.tscn::PackedScene::1425797517049111799::1722176152::0::1::::<><>::res://Assets/Scripts/cafe.gd<>uid://dplt75nhc37e5::::res://Scenes/road_segment.tscn<>uid://cco1s0fd4oo6p::::res://Scenes/door.tscn<>uid://bt6teoaan4o18::::res://Scenes/Player.tscn
+door.tscn::PackedScene::4943732450304723141::1722175981::0::1::::<><>::uid://c3lbsal28fuhk::::res://Assets/Ui/Arrow Down Sprite Sheet take 3.png
+global_scene.tscn::PackedScene::5198890446965046572::1722142738::0::1::::<><>::res://Assets/Scripts/global.gd
+main_menu.tscn::PackedScene::7945342588768086448::1722175341::0::1::::<><>::res://Assets/Scripts/main_menu.gd
+main_st.tscn::PackedScene::4539533097004836732::1722175994::0::1::::<><>::res://Assets/Scripts/main_st.gd<>uid://bmms5ls5m4i3p::::res://Assets/City Street Simple.png<>uid://bt6teoaan4o18::::res://Scenes/Player.tscn<>uid://dplt75nhc37e5::::res://Scenes/road_segment.tscn<>uid://cco1s0fd4oo6p::::res://Scenes/door.tscn
+menu_settings.tscn::PackedScene::827000206226268118::1722142738::0::1::::<><>::res://Assets/Scripts/Menu Settings.gd
+pause_menu.gdshader::Shader::-1::1722142738::0::1::::<><>::
+pause_menu.tscn::PackedScene::6373135274179438896::1722174849::0::1::::<><>::uid://gsiop4q2ns2w::::res://Assets/Ui/Michiru cellphone.png<>res://Assets/Scripts/pause_menu.gd<>res://Scenes/pause_menu.gdshader<>uid://droclwh82vb3::::res://Assets/Ui/Message Box Outline scaled.png<>uid://d0a7gf5a33h7e::::res://Assets/Ui/Gear Outline scaled.png<>uid://bomtkbalw5buh::::res://Assets/Ui/Camera Outline scaled.png<>uid://coexxv6y1ok8p::::res://Assets/Ui/Exclamation Mark Outline scaled.png<>uid://b1iruv37e8spi::::res://Assets/Ui/Save Outline scaled.png<>uid://brt6lvbinlcba::::res://Assets/Ui/Door Open Outline scaled.png
+Player.tscn::PackedScene::3785165924575183109::1722174849::0::1::::<><>::uid://7dw0ha31cgqp::::res://Assets/Player Animations/Player Idle/Player Idle 48x48.png<>res://Assets/Scripts/Player.gd<>uid://6kl1vs444y3b::::res://Assets/Player Animations/Player Jump/player jump 48x48.png<>uid://b30jeybwctetw::::res://Assets/Player Animations/Player Run/player run 48x48.png<>uid://mn5q5epoayk5::::res://Assets/Player Animations/PlayerWalk/PlayerWalk 48x48.png<>uid://dmeav83pcrxsx::::res://Assets/Player Animations/Player Land/player land 48x48.png<>uid://cw2guvrg3d7vo::::res://Scenes/pause_menu.tscn
+road_segment.tscn::PackedScene::8236015225316785990::1722142738::0::1::::<><>::

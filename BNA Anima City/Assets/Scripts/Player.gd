@@ -4,7 +4,7 @@ var SPEED = 600.0
 const JUMP_VELOCITY = -500.0
 
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var label = $CanvasLayer/Panel/Label
+#@onready var label = $CanvasLayer/Panel/Label             #it's spamming errors
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -57,25 +57,16 @@ func _physics_process(delta):
 	if Input.is_action_just_released("walk"):
 		SPEED = 550
 	
-	if Input.is_action_just_pressed("interact") and global.transition_scene == true:
-		if global.door_entered == true:
-			if global.current_door == "cafe":
-				get_tree().change_scene_to_file("res://Scenes/cafe.tscn")
-				global.current_scene = "Cafe"
-				global.finish_change_scene()
-				global.door_entered = false
-			elif global.current_door == "c_to_mainst":
-				get_tree().change_scene_to_file("res://Scenes/main_st.tscn")
-				global.finish_change_scene()
-				global.current_scene = "Main St."
-				global.door_entered = false
-			elif global.current_door == "none":
-				print("that's really weird...")
-				global.finish_change_scene()
-				return
-		else:
-			print("Idk you're not in a door bro")
-			return
+#	if Input.is_action_just_pressed("interact") and global.transition_scene == true:
+#		if global.door_entered == true:
+#			print("res://Scenes/" + global.current_door.name + ".tscn")
+#			get_tree().change_scene_to_file("res://Scenes/" + global.current_door.name + ".tscn")
+#			global.current_scene = global.current_door.name
+#			global.finish_change_scene()
+#			global.door_entered = false
+#		else:
+#			print("Idk you're not in a door bro")
+#			return
 	
 	move_and_slide()
 

@@ -5,17 +5,3 @@ func _ready():
 
 func _process(delta):
 	pass
-
-
-func _on_door_body_entered(body: CharacterBody2D):
-	print("player inside me UwU")
-	global.door_entered = true
-	global.transition_scene = true
-	global.current_door = "cafe"
-
-func _on_door_body_exited(body: CharacterBody2D):
-	print("OwO, I is now so alone")
-	global.door_entered = false
-	global.transition_scene = false
-	global.current_door = "none"
-

@@ -1,0 +1,13 @@
+res://Scenes/main_menu.tscn
+res://Assets/Scripts/Player.gd
+res://Scenes/door.tscn
+res://Scenes/cafe.tscn
+res://Scenes/main_st.tscn
+res://Assets/Scripts/cafe.gd
+res://Assets/Scripts/main_st.gd
+res://Assets/Scripts/Doors.gd
+res://Assets/Scripts/Resources/DoorResources/to_cafe.tres
+res://Scenes/Player.tscn
+res://Assets/Scripts/Resources/DoorResources/to_main_street.tres
+res://Assets/Scripts/global.gd
+res://Assets/Scripts/DoorsRes.gd

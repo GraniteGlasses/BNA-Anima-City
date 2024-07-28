@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cco1s0fd4oo6p"]
+[gd_scene load_steps=9 format=3 uid="uid://cco1s0fd4oo6p"]
 
 [ext_resource type="Texture2D" uid="uid://c3lbsal28fuhk" path="res://Assets/Ui/Arrow Down Sprite Sheet take 3.png" id="1_drlea"]
+[ext_resource type="Script" path="res://Assets/Scripts/Doors.gd" id="1_uacxd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kqdf3"]
 atlas = ExtResource("1_drlea")
@@ -42,12 +43,12 @@ animations = [{
 size = Vector2(166, 380)
 
 [node name="door" type="Area2D"]
-position = Vector2(1585, 390)
 collision_layer = 2
 collision_mask = 3
+script = ExtResource("1_uacxd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-240, -262)
+position = Vector2(0, -300)
 sprite_frames = SubResource("SpriteFrames_1ikwd")
 autoplay = "default"
 frame_progress = 0.679463
@@ -55,5 +56,4 @@ frame_progress = 0.679463
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
 visibility_layer = 3
-position = Vector2(-240, 57)
 shape = SubResource("RectangleShape2D_qprns")

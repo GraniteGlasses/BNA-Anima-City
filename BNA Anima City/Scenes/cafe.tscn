@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ukwxamyojwo2"]
+[gd_scene load_steps=7 format=3 uid="uid://ukwxamyojwo2"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/cafe.gd" id="1_csbns"]
 [ext_resource type="PackedScene" uid="uid://dplt75nhc37e5" path="res://Scenes/road_segment.tscn" id="1_l8ikh"]
 [ext_resource type="PackedScene" uid="uid://cco1s0fd4oo6p" path="res://Scenes/door.tscn" id="4_6n5be"]
 [ext_resource type="PackedScene" uid="uid://bt6teoaan4o18" path="res://Scenes/Player.tscn" id="4_7w7tg"]
+[ext_resource type="Resource" uid="uid://cilb21267avjv" path="res://Assets/Scripts/Resources/DoorResources/to_main_street.tres" id="5_67jlm"]
+[ext_resource type="Resource" uid="uid://b7n6qwrq7rg71" path="res://Assets/Scripts/Resources/DoorResources/to_cafe.tres" id="6_okwq1"]
 
 [node name="Cafe" type="Node2D"]
 script = ExtResource("1_csbns")
@@ -35,7 +37,6 @@ rotation = -1.5708
 position = Vector2(-4, 610)
 
 [node name="door" parent="." instance=ExtResource("4_6n5be")]
-position = Vector2(344, 623)
-
-[connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
-[connection signal="body_exited" from="door" to="." method="_on_door_body_exited"]
+position = Vector2(128, 672)
+door_data = ExtResource("5_67jlm")
+back_door_data = ExtResource("6_okwq1")
