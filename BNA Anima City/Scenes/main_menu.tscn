@@ -1,70 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlg1vqeyoebi3"]
+[gd_scene load_steps=7 format=3 uid="uid://dlg1vqeyoebi3"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/main_menu.gd" id="1_5b4d7"]
+[ext_resource type="Texture2D" uid="uid://gsx61xy51xb3" path="res://Assets/New Assets for git/Anima City Menu.png" id="2_5psm3"]
+[ext_resource type="Texture2D" uid="uid://dohq3i637sfxs" path="res://Assets/New Assets for git/Anima City Logo.png" id="3_uijf0"]
+[ext_resource type="Texture2D" uid="uid://huma5tb5mejk" path="res://Assets/New Assets for git/BNA Start Button.png" id="4_y0cbq"]
+[ext_resource type="Texture2D" uid="uid://ctfn35elb5owo" path="res://Assets/New Assets for git/BNA Settings Button.png" id="5_bgq2s"]
+[ext_resource type="Texture2D" uid="uid://c4jjl6r8u3qfi" path="res://Assets/New Assets for git/BNA Quit Button.png" id="6_8o2n5"]
 
 [node name="Main Menu" type="Node"]
 script = ExtResource("1_5b4d7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.455873, 0.000155799, 0.460136, 1)
+[node name="Menu Background" type="Sprite2D" parent="."]
+position = Vector2(953, 541)
+texture = ExtResource("2_5psm3")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 394.0
-offset_top = 71.0
-offset_right = 969.0
-offset_bottom = 316.0
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="ColorRect2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "BNA Anima City"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(940, 540)
+texture = ExtResource("3_uijf0")
 
 [node name="Buttons" type="Node" parent="."]
 
-[node name="Start Button" type="Button" parent="Buttons"]
+[node name="Start Button" type="TextureButton" parent="Buttons"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -65.0
-offset_right = 258.0
-offset_bottom = 4.0
+offset_left = 139.0
+offset_top = 272.0
+offset_right = 597.0
+offset_bottom = 355.0
 grow_vertical = 2
-text = "Start"
+texture_normal = ExtResource("4_y0cbq")
 
-[node name="Settings Button" type="Button" parent="Buttons"]
+[node name="Settings Button" type="TextureButton" parent="Buttons"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = 47.0
-offset_right = 258.0
-offset_bottom = 116.0
+offset_left = 729.0
+offset_top = 278.0
+offset_right = 1187.0
+offset_bottom = 361.0
 grow_vertical = 2
-text = "Settings
-"
+texture_normal = ExtResource("5_bgq2s")
 
-[node name="Quit Button" type="Button" parent="Buttons"]
+[node name="Quit Button" type="TextureButton" parent="Buttons"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 1.0
-offset_top = 173.0
-offset_right = 259.0
-offset_bottom = 242.0
+offset_left = 1309.0
+offset_top = 279.0
+offset_right = 1767.0
+offset_bottom = 362.0
 grow_vertical = 2
-text = "Quit
-"
+texture_normal = ExtResource("6_8o2n5")
 
 [connection signal="pressed" from="Buttons/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Buttons/Settings Button" to="." method="_on_settings_button_pressed"]

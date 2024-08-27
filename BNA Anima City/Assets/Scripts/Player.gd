@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var SPEED = 600.0
+var SPEED = 750.0
 const JUMP_VELOCITY = -500.0
 
 @onready var animated_sprite = $AnimatedSprite2D
@@ -55,18 +55,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("walk"):
 		SPEED = 300
 	if Input.is_action_just_released("walk"):
-		SPEED = 550
-	
-#	if Input.is_action_just_pressed("interact") and global.transition_scene == true:
-#		if global.door_entered == true:
-#			print("res://Scenes/" + global.current_door.name + ".tscn")
-#			get_tree().change_scene_to_file("res://Scenes/" + global.current_door.name + ".tscn")
-#			global.current_scene = global.current_door.name
-#			global.finish_change_scene()
-#			global.door_entered = false
-#		else:
-#			print("Idk you're not in a door bro")
-#			return
-	
-	move_and_slide()
+		SPEED = 750
 
+
+	move_and_slide()

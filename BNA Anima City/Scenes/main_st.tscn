@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5w8pgt6i0wuu"]
+[gd_scene load_steps=10 format=3 uid="uid://b5w8pgt6i0wuu"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/main_st.gd" id="1_7xvth"]
 [ext_resource type="Texture2D" uid="uid://bmms5ls5m4i3p" path="res://Assets/City Street Simple.png" id="1_gqut5"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cco1s0fd4oo6p" path="res://Scenes/door.tscn" id="5_wvqfc"]
 [ext_resource type="Resource" uid="uid://b7n6qwrq7rg71" path="res://Assets/Scripts/Resources/DoorResources/to_cafe.tres" id="6_tnu80"]
 [ext_resource type="Resource" uid="uid://cilb21267avjv" path="res://Assets/Scripts/Resources/DoorResources/to_main_street.tres" id="7_hlvpf"]
+[ext_resource type="Texture2D" uid="uid://d0pf08bvxfnn4" path="res://Assets/New Assets for git/sidewalk-wip.png" id="8_yd1gu"]
+[ext_resource type="Texture2D" uid="uid://dwiy3hu2s5lr3" path="res://Assets/New Assets for git/shirou-wip.png" id="9_usxqb"]
 
 [node name="main_st" type="Node2D"]
 script = ExtResource("1_7xvth")
@@ -19,9 +21,52 @@ texture = ExtResource("1_gqut5")
 position = Vector2(87, 544)
 
 [node name="Player" parent="." instance=ExtResource("2_uba7a")]
-position = Vector2(189, 345)
+position = Vector2(202, 386)
 
 [node name="door" parent="." instance=ExtResource("5_wvqfc")]
 position = Vector2(1385, 439)
 door_data = ExtResource("6_tnu80")
 back_door_data = ExtResource("7_hlvpf")
+
+[node name="Sidewalk Tiles" type="Node" parent="."]
+
+[node name="Sidewalk-wip2" type="Sprite2D" parent="Sidewalk Tiles"]
+position = Vector2(275, 732)
+texture = ExtResource("8_yd1gu")
+
+[node name="Sidewalk-wip3" type="Sprite2D" parent="Sidewalk Tiles"]
+position = Vector2(875, 732)
+texture = ExtResource("8_yd1gu")
+
+[node name="Sidewalk-wip4" type="Sprite2D" parent="Sidewalk Tiles"]
+position = Vector2(1475, 732)
+texture = ExtResource("8_yd1gu")
+
+[node name="Sidewalk-wip5" type="Sprite2D" parent="Sidewalk Tiles"]
+position = Vector2(2075, 732)
+texture = ExtResource("8_yd1gu")
+
+[node name="Sidewalk-wip" type="Sprite2D" parent="Sidewalk Tiles"]
+position = Vector2(-325, 732)
+texture = ExtResource("8_yd1gu")
+
+[node name="Sidewalk-wip6" type="Sprite2D" parent="Sidewalk Tiles"]
+position = Vector2(2675, 732)
+texture = ExtResource("8_yd1gu")
+
+[node name="Sidewalk-wip7" type="Sprite2D" parent="Sidewalk Tiles"]
+position = Vector2(3275, 732)
+texture = ExtResource("8_yd1gu")
+
+[node name="Sidewalk-wip8" type="Sprite2D" parent="Sidewalk Tiles"]
+position = Vector2(3875, 732)
+texture = ExtResource("8_yd1gu")
+
+[node name="Sidewalk-wip9" type="Sprite2D" parent="Sidewalk Tiles"]
+position = Vector2(4475, 732)
+texture = ExtResource("8_yd1gu")
+
+[node name="Shirou-wip" type="Sprite2D" parent="."]
+position = Vector2(2978, 453)
+scale = Vector2(1, 0.584718)
+texture = ExtResource("9_usxqb")

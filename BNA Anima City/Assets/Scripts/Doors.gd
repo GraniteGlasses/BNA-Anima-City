@@ -35,6 +35,8 @@ func _physics_process(delta):
 
 
 
+
+
 func pack_and_change_scene(new_scene_path: String):
 	# Get the current scene
 	var current_scene = get_tree().current_scene
