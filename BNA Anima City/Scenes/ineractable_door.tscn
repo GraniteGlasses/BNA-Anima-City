@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://b40xggqop765h"]
+
+[node name="IneractableDoor" type="Node2D"]

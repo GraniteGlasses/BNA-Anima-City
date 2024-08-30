@@ -98,7 +98,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(-9, 316)
 scale = Vector2(0.37, 0.37)
 texture = ExtResource("1_bmj4r")

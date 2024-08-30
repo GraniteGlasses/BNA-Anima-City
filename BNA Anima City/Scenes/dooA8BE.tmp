@@ -43,7 +43,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q61px"]
 size = Vector2(345, 624)
 
-[node name="door" type="Node2D"]
+[node name="door" type="Node"]
 script = ExtResource("1_uacxd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -54,7 +54,6 @@ frame = 3
 frame_progress = 0.996235
 
 [node name="InteractionArea" parent="." instance=ExtResource("3_uum0q")]
-action_name = "Open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(5, 45)

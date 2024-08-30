@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://l1utp5kkswh7"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Menu Settings.gd" id="1_dk46d"]
-[ext_resource type="Texture2D" uid="uid://gsx61xy51xb3" path="res://Assets/New Assets for git/Anima City Menu.png" id="2_ca56a"]
+[ext_resource type="Texture2D" uid="uid://gsx61xy51xb3" path="res://Assets/Ui/Anima City Menu.png" id="2_ca56a"]
 
 [node name="Menu Settings" type="Control"]
 layout_mode = 3

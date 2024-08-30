@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cco1s0fd4oo6p" path="res://Scenes/door.tscn" id="5_wvqfc"]
 [ext_resource type="Resource" uid="uid://b7n6qwrq7rg71" path="res://Assets/Scripts/Resources/DoorResources/to_cafe.tres" id="6_tnu80"]
 [ext_resource type="Resource" uid="uid://cilb21267avjv" path="res://Assets/Scripts/Resources/DoorResources/to_main_street.tres" id="7_hlvpf"]
-[ext_resource type="Texture2D" uid="uid://d0pf08bvxfnn4" path="res://Assets/New Assets for git/sidewalk-wip.png" id="8_yd1gu"]
-[ext_resource type="Texture2D" uid="uid://dwiy3hu2s5lr3" path="res://Assets/New Assets for git/shirou-wip.png" id="9_usxqb"]
+[ext_resource type="Texture2D" uid="uid://d0pf08bvxfnn4" path="res://sidewalk-wip.png" id="8_yd1gu"]
+[ext_resource type="PackedScene" uid="uid://b55hoayq066rb" path="res://Scenes/NPCs/Shirou Folder/Shirou.tscn" id="9_nblqf"]
 
 [node name="main_st" type="Node2D"]
 script = ExtResource("1_7xvth")
@@ -22,11 +22,6 @@ position = Vector2(87, 544)
 
 [node name="Player" parent="." instance=ExtResource("2_uba7a")]
 position = Vector2(202, 386)
-
-[node name="door" parent="." instance=ExtResource("5_wvqfc")]
-position = Vector2(1385, 439)
-door_data = ExtResource("6_tnu80")
-back_door_data = ExtResource("7_hlvpf")
 
 [node name="Sidewalk Tiles" type="Node" parent="."]
 
@@ -66,7 +61,10 @@ texture = ExtResource("8_yd1gu")
 position = Vector2(4475, 732)
 texture = ExtResource("8_yd1gu")
 
-[node name="Shirou-wip" type="Sprite2D" parent="."]
-position = Vector2(2978, 453)
-scale = Vector2(1, 0.584718)
-texture = ExtResource("9_usxqb")
+[node name="Shirou" parent="." instance=ExtResource("9_nblqf")]
+position = Vector2(2889, 338)
+
+[node name="door" parent="." instance=ExtResource("5_wvqfc")]
+position = Vector2(1389, 339)
+door_data = ExtResource("6_tnu80")
+back_door_data = ExtResource("7_hlvpf")
