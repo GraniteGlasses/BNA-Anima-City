@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="DoorResource" load_steps=2 format=3 uid="uid://b7n6qwrq7rg71"]
-
-[ext_resource type="Script" path="res://Assets/Scripts/DoorsRes.gd" id="1_cs7te"]
-
-[resource]
-script = ExtResource("1_cs7te")
-door_name = "to_cafe"
-target_scene_path = "res://Scenes/cafe.tscn"
