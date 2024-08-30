@@ -3,41 +3,25 @@ extends Node
 @export var door_data : DoorResource
 @export var back_door_data : DoorResource
 
+@onready var interaction_area: InteractionArea = $InteractionArea
+
 var player_inside : bool = false 
 
 func _ready():
 	if door_data and door_data.is_valid() == false:
 		print("A door is not valid")
-
-# FOR SOME REASON, IF CONNECTED WITH INTERFACE, SPAMS ERRORS. (took 1h to fix it even tho it is not breaking anything)
-	if not is_connected("body_entered", Callable(self, "_on_body_entered")):
-		connect("body_entered", Callable(self, "_on_body_entered"))
 	
-	if not is_connected("body_exited", Callable(self, "_on_body_entered")):
-		connect("body_exited", Callable(self, "_on_body_entered"))
-		
+	interaction_area.interact = Callable(self, "use_door")
+
+
 func use_door():
 	if door_data and door_data.is_valid():
 		pack_and_change_scene(door_data.get_target_scene_path())
 
-func _on_body_entered(body):
-	if body.get_class() == "CharacterBody2D":
-		player_inside = true
-
-func _on_body_exited(body):
-	if body.get_class() == "CharacterBody2D":
-		player_inside = false
-
-func _physics_process(delta):
-	if Input.is_action_just_pressed("interact") and player_inside:
-		use_door()
-		print("door used")
 
 
 
-
-
-func pack_and_change_scene(new_scene_path: String):
+func pack_and_change_scene(_new_scene_path: String):
 	# Get the current scene
 	var current_scene = get_tree().current_scene
 	
