@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://ukwxamyojwo2"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/cafe.gd" id="1_csbns"]
+[ext_resource type="PackedScene" uid="uid://dplt75nhc37e5" path="res://Scenes/road_segment.tscn" id="1_l8ikh"]
+[ext_resource type="PackedScene" uid="uid://cco1s0fd4oo6p" path="res://Scenes/door.tscn" id="4_6n5be"]
+[ext_resource type="PackedScene" uid="uid://bt6teoaan4o18" path="res://Scenes/Player.tscn" id="4_7w7tg"]
+[ext_resource type="Resource" uid="uid://cilb21267avjv" path="res://Assets/Scripts/Resources/DoorResources/to_main_street.tres" id="5_67jlm"]
+[ext_resource type="Resource" uid="uid://b7n6qwrq7rg71" path="res://Assets/Scripts/Resources/DoorResources/to_cafe.tres" id="6_okwq1"]
+
+[node name="Cafe" type="Node2D"]
+script = ExtResource("1_csbns")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = 165.0
+offset_right = 1876.0
+offset_bottom = 885.0
+color = Color(0.468068, 0.000157291, 0.469484, 1)
+
+[node name="invisible walls" type="Node" parent="."]
+
+[node name="Road Segment" parent="invisible walls" instance=ExtResource("1_l8ikh")]
+position = Vector2(581, 757)
+
+[node name="Road Segment2" parent="invisible walls" instance=ExtResource("1_l8ikh")]
+position = Vector2(111, 590)
+rotation = 1.5708
+
+[node name="Road Segment3" parent="invisible walls" instance=ExtResource("1_l8ikh")]
+position = Vector2(100, 273)
+rotation = 3.14159
+
+[node name="Road Segment4" parent="invisible walls" instance=ExtResource("1_l8ikh")]
+position = Vector2(1770, 505)
+rotation = -1.5708
+
+[node name="Player" parent="." instance=ExtResource("4_7w7tg")]
+position = Vector2(-3, 630)
+
+[node name="door" parent="." instance=ExtResource("4_6n5be")]
+position = Vector2(168, 530)
+door_data = ExtResource("5_67jlm")
+back_door_data = ExtResource("6_okwq1")
