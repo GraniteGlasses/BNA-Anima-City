@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b55hoayq066rb"]
+[gd_scene load_steps=12 format=3 uid="uid://b55hoayq066rb"]
 
 [ext_resource type="Texture2D" uid="uid://dwiy3hu2s5lr3" path="res://Scenes/NPCs/Shirou Folder/shirou-wip.png" id="1_eoou8"]
 [ext_resource type="Script" path="res://Scenes/NPCs/Shirou Folder/shirou_script.gd" id="1_oj4is"]
 [ext_resource type="Texture2D" uid="uid://c3lbsal28fuhk" path="res://Assets/Ui/Arrow Down Sprite Sheet take 3.png" id="3_4bmmk"]
 [ext_resource type="PackedScene" uid="uid://7mip7nhh7jsb" path="res://interaction/interaction area/interaction_area.tscn" id="4_64f5v"]
+[ext_resource type="Resource" uid="uid://kkt5t85nja56" path="res://Dialogue/NPC Dialogues/Shirou_dialogue.dialogue" id="5_maeih"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kqdf3"]
 atlas = ExtResource("3_4bmmk")
@@ -41,13 +42,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s62cd"]
-size = Vector2(851, 599)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlpwn"]
+size = Vector2(975, 688)
 
-[node name="Shirou" type="Area2D"]
-collision_layer = 2
-collision_mask = 2
+[node name="Shirou" type="Node2D"]
 script = ExtResource("1_oj4is")
+dialogue_rescource = ExtResource("5_maeih")
+dialogue_start = "shirou_start"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_eoou8")
@@ -60,12 +61,10 @@ autoplay = "default"
 frame_progress = 0.324219
 
 [node name="InteractionArea" parent="." instance=ExtResource("4_64f5v")]
-action_name = "Talk"
+dialogue_rescource = ExtResource("5_maeih")
+dialogue_start = "shirou_start"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-53.5, 0.5)
-shape = SubResource("RectangleShape2D_s62cd")
-debug_color = Color(0.90265, 0.294429, 0.243426, 0.42)
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+position = Vector2(-2.5, -44)
+shape = SubResource("RectangleShape2D_hlpwn")
+debug_color = Color(0.22064, 0.623091, 0.410432, 0.42)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5w8pgt6i0wuu"]
+[gd_scene load_steps=11 format=3 uid="uid://b5w8pgt6i0wuu"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/main_st.gd" id="1_7xvth"]
 [ext_resource type="Texture2D" uid="uid://bmms5ls5m4i3p" path="res://Assets/City Street Simple.png" id="1_gqut5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://cilb21267avjv" path="res://Assets/Scripts/Resources/DoorResources/to_main_street.tres" id="7_hlvpf"]
 [ext_resource type="Texture2D" uid="uid://d0pf08bvxfnn4" path="res://sidewalk-wip.png" id="8_yd1gu"]
 [ext_resource type="PackedScene" uid="uid://b55hoayq066rb" path="res://Scenes/NPCs/Shirou Folder/Shirou.tscn" id="9_nblqf"]
+[ext_resource type="Texture2D" uid="uid://c6t04s2xkvsyp" path="res://Assets/B co-op WIP.png" id="10_bb0wv"]
 
 [node name="main_st" type="Node2D"]
 script = ExtResource("1_7xvth")
@@ -65,6 +66,11 @@ texture = ExtResource("8_yd1gu")
 position = Vector2(2889, 338)
 
 [node name="door" parent="." instance=ExtResource("5_wvqfc")]
-position = Vector2(1389, 339)
+position = Vector2(1360, 320)
 door_data = ExtResource("6_tnu80")
 back_door_data = ExtResource("7_hlvpf")
+
+[node name="BCo-opWip" type="Sprite2D" parent="."]
+position = Vector2(5801, -213)
+scale = Vector2(0.574779, 0.574779)
+texture = ExtResource("10_bb0wv")

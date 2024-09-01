@@ -3,11 +3,14 @@ class_name InteractionArea
 
 
 @export var action_name: String = "Interact"
+@export var dialogue_rescource: DialogueResource
+@export var dialogue_start: String = "start"
+
 
 
 var interact: Callable = func():
 	pass
-	
+
 
 func _on_body_entered(_body):
 	InteractionManager.register_area(self)
