@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://kkt5t85nja56"
+path="res://.godot/imported/Shirou_dialogue.dialogue-1d5f1a33ad1bbdb15db2054a9c0a0751.tres"
+
+[deps]
+
+source_file="res://Dialogue/NPC Dialogues/Shirou_dialogue.dialogue"
+dest_files=["res://.godot/imported/Shirou_dialogue.dialogue-1d5f1a33ad1bbdb15db2054a9c0a0751.tres"]
+
+[params]
+
+defaults=true

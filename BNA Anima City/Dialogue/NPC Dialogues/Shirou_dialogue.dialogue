@@ -1,0 +1,40 @@
+~ shirou_start
+
+if global.dialogue:
+	=> END
+else:
+	if global.shirou_level == 0:
+		=> shirou_level_0
+	elif global.shirou_level == 1:
+		=> shirou_level_1
+
+
+~ convo_end
+set global.dialogue = false
+=> END
+
+~ shirou_level_0
+set global.dialouge = true
+Shirou: [[Hi|Hello|Howdy]], this is some dialogue.
+Shirou: Here are some choices.
+- First one
+	Shirou: You picked the first one.
+- Second one
+	Shirou: You picked the second one.
+- Start again => shirou_start
+- End the conversation
+	=> convo_end
+
+set global.shirou_level += 1
+
+
+
+
+~ shirou_level_1
+Shirou: I've been meaning to ask you Michiru.
+Shirou: Are you available to have a chat?
+- Yes
+	Shirou: Excellent, we need to go to the City Hall to have a talk with the Mayor.
+	=> convo_end
+- Not right now.
+	=> convo_end

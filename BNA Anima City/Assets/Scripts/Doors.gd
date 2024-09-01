@@ -5,7 +5,6 @@ extends Node
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 
-var player_inside : bool = false 
 
 func _ready():
 	if door_data and door_data.is_valid() == false:
