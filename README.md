@@ -12,3 +12,4 @@ Granite - Lead programmer,
 Andesite - programmer,
 Rhos - provider of all UI assets purchased at (https://rhosgfx.itch.io/vector-icon-pack),
 Zeggy - provider of the current placeholder player sprite purchased at https://zegley.itch.io/2d-platformermetroidvania-asset-pack,
+Nana_Draws - the creator of all current NPC sprites in the game, can be found at https://www.reddit.com/user/Nana_Draws/
