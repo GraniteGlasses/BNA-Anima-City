@@ -17,5 +17,12 @@ var cafe : Vector2 = Vector2(0, 0)
 
 
 # This section is where I'll track NPC levels
-var shirou_level = 0
-var nazuna_level = 0
+var shirou_first_dialogue: bool = true
+var shirou_story_level = 0
+var shirou_relationship_level = 0
+var shirou_quest_start: bool = false
+
+var nazuna_first_dialogue: bool = true
+var nazuna_story_level = 0
+var nazuna_relationship_level = 0
+var nazuna_quest_start: bool = false
