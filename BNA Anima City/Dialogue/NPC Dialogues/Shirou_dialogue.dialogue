@@ -1,40 +1,108 @@
 ~ shirou_start
-
 if global.dialogue:
 	=> END
 else:
-	if global.shirou_level == 0:
-		=> shirou_level_0
-	elif global.shirou_level == 1:
-		=> shirou_level_1
+	set global.dialogue = true
+	Shirou: Hey Michiru.
+	if global.shirou_first_dialogue:
+		=> first_talk
+	else:
+		=> convo_select
+
+
+~ first_talk
+- What's on the agenda?
+	set global.shirou_first_dialogue = false
+	=> story_dialogue
+
+
+~  convo_select
+- What's on the agenda?
+	=> story_dialogue
+- Shirou, I've been meaning to ask..
+	=> relationship_dialogue
+- Nevermind.
+	Shirou: [[Alright then.| Some other time.| Take care.]]
+	=> convo_end
 
 
 ~ convo_end
 set global.dialogue = false
 => END
 
-~ shirou_level_0
-set global.dialouge = true
-Shirou: [[Hi|Hello|Howdy]], this is some dialogue.
-Shirou: Here are some choices.
-- First one
-	Shirou: You picked the first one.
-- Second one
-	Shirou: You picked the second one.
-- Start again => shirou_start
-- End the conversation
+
+## This section will act as a directory, dialogue scenes will be further down.
+~ story_dialogue
+if global.shirou_story_level == 0:
+	=> shirou_story_level_0
+elif global.shirou_story_level == 1:
+	=> shirou_story_level_1
+
+
+~ relationship_dialogue
+if global.shirou_relationship_level == 0:
+	=> convo_end
+elif global.shirou_relationship_level == 1:
 	=> convo_end
 
-set global.shirou_level += 1
 
 
-
-
-~ shirou_level_1
-Shirou: I've been meaning to ask you Michiru.
-Shirou: Are you available to have a chat?
-- Yes
-	Shirou: Excellent, we need to go to the City Hall to have a talk with the Mayor.
+###
+###
+### STORY DIALOGUES GO HERE
+###
+###
+~ shirou_story_level_0
+if global.shirou_quest_start:
+	- I changed my mind
+		Narrorator: This is where they would go to the City Hall together
+	- What are we doing again?
+		Shirou: We need to meet Mayor Rose at City Hall.
+		Shirou: Do you want to go together?
+		- Yes (Not implemented)
+			Narrorator: This is where they would go to the City Hall together
+		- Not right now.
+			Shirou: Very well. If you change your mind before I leave let me know.
+			Shirou: Otherwise, I'll meet you there
+		- Set global.shirou_story_level = 1
+			Shirou: Uh WHAT?
+			set global.shirou_story_level += 1
+			=> convo_end
+	-Nevermind => convo_end
+	-Shirou, I've been meaning to ask..
+		Shirou: We don't have time for casual talking right now. => convo_end
+else:
+	Shirou: Mayor Rose has asked us to meet her at the City Hall.
+	Shirou: It seemed importtant, would you like to head there with me or meet me there later?
+	- Let's head straight there (not implemented)
+		Shirou: Lets.
+		Narrorator: This is where they would go to the City Hall together
+	- I've got some things to do first
+		Shirou: I'll see you there. If you change your mind before I leave feel free to let me know.
+		Michiru: Sounds good to me
+	set global.shirou_quest_start = true
 	=> convo_end
-- Not right now.
-	=> convo_end
+
+
+
+~ shirou_story_level_1
+=> convo_end
+
+
+
+###
+###
+### RELATIONSHIP DIALOGUES GO HERE
+###
+###
+
+~ shirou_relationship_level_0
+if global.shirou_story_level < 1:
+	Shirou: We don't have time to talk right now, we need to meet with the mayor.
+	- Lets go now then.(Not implemented yet)
+		Narrorator: 
+	- I understand I'll meet you there.
+		 => convo_end
+elif global.shirou_relationship == 0:
+	Michiru: [[Your collars, do people give you funny looks for wearing them?| Do you think Alan had three heads because his family did royal inbreeding?| Are lobster beastmen immortal?]]
+	Shirou: What..?

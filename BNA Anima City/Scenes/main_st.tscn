@@ -22,7 +22,7 @@ texture = ExtResource("1_gqut5")
 position = Vector2(87, 544)
 
 [node name="Player" parent="." instance=ExtResource("2_uba7a")]
-position = Vector2(202, 386)
+position = Vector2(3883, 390)
 
 [node name="Sidewalk Tiles" type="Node" parent="."]
 
@@ -63,10 +63,10 @@ position = Vector2(4475, 732)
 texture = ExtResource("8_yd1gu")
 
 [node name="Shirou" parent="." instance=ExtResource("9_nblqf")]
-position = Vector2(2889, 338)
+position = Vector2(2913, 356)
 
 [node name="door" parent="." instance=ExtResource("5_wvqfc")]
-position = Vector2(1360, 320)
+position = Vector2(1398, 284)
 door_data = ExtResource("6_tnu80")
 back_door_data = ExtResource("7_hlvpf")
 
